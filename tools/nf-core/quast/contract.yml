@@ -43,9 +43,8 @@ produces:
     given.fasta: present
 params:
 - name: prefix
-  default: ${meta.id}
-  because: main.nf reads task.ext.prefix and falls back to meta.id; this value names
-    the output directory and report files.
+  because: main.nf reads task.ext.prefix and falls back to meta.id, so it has no default;
+    a value names the output directory and report files.
   via: ext
   key: prefix
 roles:
